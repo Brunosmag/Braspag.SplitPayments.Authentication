@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Braspag.Authentication.Domain.Services.Base64Encrypter
+namespace Braspag.Authentication.Domain.Services.Base64Encrypters
 {
     public class Base64Encrypter : IBase64Encrypter
     {
