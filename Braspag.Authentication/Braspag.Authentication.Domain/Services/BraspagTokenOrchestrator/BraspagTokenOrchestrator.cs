@@ -14,22 +14,21 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
     {
         public IBase64Encrypter Base64Encrypter { get; }
         public IHttpClientFactory HttpClientFactory { get; }
-        public IConfiguration Configuration { get; }
 
         public BraspagTokenOrchestrator(
             IBase64Encrypter base64Encrypter,
-            IHttpClientFactory httpClientFactory,
-            IConfiguration configuration)
+            IHttpClientFactory httpClientFactory)
         {
             Base64Encrypter = base64Encrypter ?? throw new ArgumentNullException(nameof(base64Encrypter));
             HttpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
-            Configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
 
         public async Task<AccessToken> CreateProductionToken(Guid clientId, Guid clientSecret)
         {
-            return await RequestAccessToken(clientId, clientSecret, "");
+            const string productionEndpoint = "https://auth.braspag.com.br";
+
+            return await RequestAccessToken(clientId, clientSecret, productionEndpoint);
 
             throw new NotImplementedException();
 
@@ -37,7 +36,9 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
 
         public async Task<AccessToken> CreateSandboxToken(Guid clientId, Guid clientSecret)
         {
-            return await RequestAccessToken(clientId, clientSecret, "");
+            const string sandboxEndpoint = "https://authsandbox.braspag.com.br";
+
+            return await RequestAccessToken(clientId, clientSecret, sandboxEndpoint);
 
             throw new NotImplementedException();
         }
