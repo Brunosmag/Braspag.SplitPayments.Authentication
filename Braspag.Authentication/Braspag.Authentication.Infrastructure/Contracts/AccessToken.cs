@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Braspag.Authentication.Domain.Contracts
+namespace Braspag.Authentication.Infrastructure.Contracts
 {
     public class AccessToken
     {

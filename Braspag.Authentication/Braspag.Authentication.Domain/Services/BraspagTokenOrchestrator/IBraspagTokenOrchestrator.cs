@@ -1,4 +1,4 @@
-﻿using Braspag.Authentication.Domain.Contracts;
+﻿using Braspag.Authentication.Infrastructure.Contracts;
 using System;
 using System.Threading.Tasks;
 
