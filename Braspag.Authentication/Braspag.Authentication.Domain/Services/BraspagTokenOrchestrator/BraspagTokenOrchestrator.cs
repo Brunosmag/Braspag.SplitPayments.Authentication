@@ -19,20 +19,22 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
             AccessTokenClient = accessTokenClient ?? throw new ArgumentNullException(nameof(accessTokenClient));
         }
 
-
         public async Task<AccessToken> CreateProductionToken(Guid clientId, string clientSecret)
         {
-            var clientCredentialsInBase64 = Base64Encrypter.EncryptInBase64(clientId, clientSecret);
+            string productionCredentialsInBase64 = EncryptCredentialsInBase64(clientId, clientSecret);
 
-            return await AccessTokenClient.CreateProductionToken(clientCredentialsInBase64);
+            return await AccessTokenClient.CreateProductionToken(productionCredentialsInBase64);
 
         }
 
         public async Task<AccessToken> CreateSandboxToken(Guid clientId, string clientSecret)
         {
-            var clientCredentialsInBase64 = Base64Encrypter.EncryptInBase64(clientId, clientSecret);
+            var sandboxCredentialsInBase64 = EncryptCredentialsInBase64(clientId, clientSecret);
 
-            return await AccessTokenClient.CreateSandboxToken(clientCredentialsInBase64);
+            return await AccessTokenClient.CreateSandboxToken(sandboxCredentialsInBase64);
         }
+
+        private string EncryptCredentialsInBase64(Guid clientId, string clientSecret)
+            => Base64Encrypter.EncryptInBase64(clientId, clientSecret);
     }
 }
