@@ -20,7 +20,7 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
         }
 
 
-        public async Task<AccessToken> CreateProductionToken(Guid clientId, Guid clientSecret)
+        public async Task<AccessToken> CreateProductionToken(Guid clientId, string clientSecret)
         {
             var clientCredentialsInBase64 = Base64Encrypter.EncryptInBase64(clientId, clientSecret);
 
@@ -28,7 +28,7 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
 
         }
 
-        public async Task<AccessToken> CreateSandboxToken(Guid clientId, Guid clientSecret)
+        public async Task<AccessToken> CreateSandboxToken(Guid clientId, string clientSecret)
         {
             var clientCredentialsInBase64 = Base64Encrypter.EncryptInBase64(clientId, clientSecret);
 

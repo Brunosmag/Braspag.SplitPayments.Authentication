@@ -19,7 +19,7 @@ namespace Braspag.Authentication.UnitTests.Domain.Services.Base64Encrypters
         [Theory,AutoNSubstituteData]
         public void Sut_Should_Correctly_Generate_Base64_Hash_With_ClientId_And_ClientSecret(
             Guid clientId,
-            Guid clientSecret,
+            string clientSecret,
             Base64Encrypter sut)
         {
             var expected = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{clientId}:{clientSecret}"));
