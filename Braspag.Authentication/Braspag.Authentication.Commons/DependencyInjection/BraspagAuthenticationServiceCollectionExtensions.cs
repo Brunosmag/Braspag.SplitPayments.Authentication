@@ -7,7 +7,7 @@ using System.Net.Http;
 
 namespace Braspag.Authentication.Commons.DependencyInjection
 {
-    public static class BraspagAuthenticationCollectionExtensions
+    public static class BraspagAuthenticationServiceCollectionExtensions
     {
         public static IServiceCollection AddBraspagAuthentication(this IServiceCollection services)
         {

@@ -19,25 +19,25 @@ namespace Braspag.Authentication.Infrastructure.Clients
         }
 
 
-        public async Task<AccessToken> CreateProductionToken(string clientCredentialsInBase64)
+        public async Task<AccessToken> GetProductionTokenAsync(string clientCredentialsInBase64)
         {
             const string endpoint = "https://auth.braspag.com.br";
 
-            var accessToken = await RequestAccessToken(clientCredentialsInBase64, endpoint);
+            var accessToken = await RequestAccessTokenAsync(clientCredentialsInBase64, endpoint);
 
             return accessToken;
         }
 
-        public async Task<AccessToken> CreateSandboxToken(string clientCredentialsInBase64)
+        public async Task<AccessToken> GetSandboxTokenAsync(string clientCredentialsInBase64)
         {
             const string endpoint = "https://authsandbox.braspag.com.br";
 
-            var accessToken = await RequestAccessToken(clientCredentialsInBase64, endpoint);
+            var accessToken = await RequestAccessTokenAsync(clientCredentialsInBase64, endpoint);
 
             return accessToken;
         }
 
-        private async Task<AccessToken> RequestAccessToken(string clientCredentialsInBase64, string endpoint)
+        private async Task<AccessToken> RequestAccessTokenAsync(string clientCredentialsInBase64, string endpoint)
         {
             var httpClient = HttpClientFactory.CreateClient();
             httpClient.BaseAddress = new Uri(endpoint);

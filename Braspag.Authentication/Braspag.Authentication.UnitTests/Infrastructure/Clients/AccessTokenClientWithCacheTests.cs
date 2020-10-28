@@ -37,14 +37,14 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
                 return true;
             });
 
-            var actual = await sut.CreateProductionToken(clientCredentialsInBase64);
+            var actual = await sut.GetProductionTokenAsync(clientCredentialsInBase64);
 
             actual.Should().Be(accessToken);
 
             await sut
                 .AccessTokenClient
                 .DidNotReceive()
-                .CreateProductionToken(clientCredentialsInBase64);
+                .GetProductionTokenAsync(clientCredentialsInBase64);
         }
 
         [Theory, AutoNSubstituteData]
@@ -61,14 +61,14 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
                 return true;
             });
 
-            var actual = await sut.CreateSandboxToken(clientCredentialsInBase64);
+            var actual = await sut.GetSandboxTokenAsync(clientCredentialsInBase64);
 
             actual.Should().Be(accessToken);
 
             await sut
                 .AccessTokenClient
                 .DidNotReceive()
-                .CreateSandboxToken(clientCredentialsInBase64);
+                .GetSandboxTokenAsync(clientCredentialsInBase64);
         }
 
         [Theory, AutoNSubstituteData]
@@ -79,7 +79,7 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
         {
             sut
                 .AccessTokenClient
-                .CreateProductionToken(clientCredentialsInBase64)
+                .GetProductionTokenAsync(clientCredentialsInBase64)
                 .Returns(accessToken);
 
             var cacheKey = $"{clientCredentialsInBase64}-Production";
@@ -90,14 +90,14 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
                 return false;
             });
 
-            var actual = await sut.CreateProductionToken(clientCredentialsInBase64);
+            var actual = await sut.GetProductionTokenAsync(clientCredentialsInBase64);
 
             actual.Should().Be(accessToken);
 
             await sut
                 .AccessTokenClient
                 .Received()
-                .CreateProductionToken(clientCredentialsInBase64);
+                .GetProductionTokenAsync(clientCredentialsInBase64);
         }
 
         [Theory, AutoNSubstituteData]
@@ -108,7 +108,7 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
         {
             sut
                 .AccessTokenClient
-                .CreateSandboxToken(clientCredentialsInBase64)
+                .GetSandboxTokenAsync(clientCredentialsInBase64)
                 .Returns(accessToken);
 
             var cacheKey = $"{clientCredentialsInBase64}-Sandbox";
@@ -119,14 +119,14 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
                 return false;
             });
 
-            var actual = await sut.CreateSandboxToken(clientCredentialsInBase64);
+            var actual = await sut.GetSandboxTokenAsync(clientCredentialsInBase64);
 
             actual.Should().Be(accessToken);
 
             await sut
                 .AccessTokenClient
                 .Received()
-                .CreateSandboxToken(clientCredentialsInBase64);
+                .GetSandboxTokenAsync(clientCredentialsInBase64);
         }
     }
 }

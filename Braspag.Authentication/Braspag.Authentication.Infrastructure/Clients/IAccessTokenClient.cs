@@ -6,8 +6,8 @@ namespace Braspag.Authentication.Infrastructure.Clients
 {
     public interface IAccessTokenClient
     {
-        Task<AccessToken> CreateSandboxToken(string clientCredentialsInBase64);
+        Task<AccessToken> GetSandboxTokenAsync(string clientCredentialsInBase64);
 
-        Task<AccessToken> CreateProductionToken(string clientCredentialsInBase64);
+        Task<AccessToken> GetProductionTokenAsync(string clientCredentialsInBase64);
     }
 }

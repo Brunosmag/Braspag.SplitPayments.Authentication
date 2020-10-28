@@ -6,8 +6,8 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
 {
     public interface IBraspagTokenOrchestrator
     {
-        Task<AccessToken> CreateProductionToken(Guid clientId, string clientSecret);
+        Task<AccessToken> CreateProductionTokenAsync(Guid clientId, string clientSecret);
 
-        Task<AccessToken> CreateSandboxToken(Guid clientId, string clientSecret);
+        Task<AccessToken> CreateSandboxTokenAsync(Guid clientId, string clientSecret);
     }
 }

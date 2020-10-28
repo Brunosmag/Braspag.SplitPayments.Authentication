@@ -18,27 +18,27 @@ namespace Braspag.Authentication.Infrastructure.Clients
             AccessTokenClient = accessTokenClient ?? throw new ArgumentNullException(nameof(accessTokenClient));
         }
 
-        public async Task<AccessToken> CreateProductionToken(string clientCredentialsInBase64)
+        public async Task<AccessToken> GetProductionTokenAsync(string clientCredentialsInBase64)
         {
             var cacheKey = $"{clientCredentialsInBase64}-Production";
 
             if (MemoryCache.TryGetValue(cacheKey, out object token))
                 return (AccessToken)token;
 
-            token = await AccessTokenClient.CreateProductionToken(clientCredentialsInBase64);
+            token = await AccessTokenClient.GetProductionTokenAsync(clientCredentialsInBase64);
 
             MemoryCache.Set(cacheKey, token, GetProductionCacheOptions());
             return (AccessToken)token;
         }
 
-        public async Task<AccessToken> CreateSandboxToken(string clientCredentialsInBase64)
+        public async Task<AccessToken> GetSandboxTokenAsync(string clientCredentialsInBase64)
         {
             var cacheKey = $"{clientCredentialsInBase64}-Sandbox";
 
             if (MemoryCache.TryGetValue(cacheKey, out object token))
                 return (AccessToken)token;
 
-            token = await AccessTokenClient.CreateSandboxToken(clientCredentialsInBase64);
+            token = await AccessTokenClient.GetSandboxTokenAsync(clientCredentialsInBase64);
 
             MemoryCache.Set(cacheKey, token, GetSandboxCacheOptions());
             return (AccessToken)token;
