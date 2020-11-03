@@ -22,42 +22,32 @@ namespace Braspag.Authentication.Infrastructure.Clients
         {
             var cacheKey = $"{clientCredentialsInBase64}-Production";
 
-            if (MemoryCache.TryGetValue(cacheKey, out object token))
-                return (AccessToken)token;
+            if (MemoryCache.TryGetValue(cacheKey, out AccessToken token))
+                return token;
 
             token = await AccessTokenClient.GetProductionTokenAsync(clientCredentialsInBase64);
 
-            MemoryCache.Set(cacheKey, token, GetProductionCacheOptions());
-            return (AccessToken)token;
+            MemoryCache.Set(cacheKey, token, GetCacheOptions(token));
+
+            return token;
         }
 
         public async Task<AccessToken> GetSandboxTokenAsync(string clientCredentialsInBase64)
         {
             var cacheKey = $"{clientCredentialsInBase64}-Sandbox";
 
-            if (MemoryCache.TryGetValue(cacheKey, out object token))
-                return (AccessToken)token;
+            if (MemoryCache.TryGetValue(cacheKey, out AccessToken token))
+                return token;
 
             token = await AccessTokenClient.GetSandboxTokenAsync(clientCredentialsInBase64);
 
-            MemoryCache.Set(cacheKey, token, GetSandboxCacheOptions());
-            return (AccessToken)token;
+            MemoryCache.Set(cacheKey, token, GetCacheOptions(token));
+
+            return token;
         }
 
-        private MemoryCacheEntryOptions GetProductionCacheOptions()
-        {
-            var productionCacheExpirationInSeconds = 1199;
-
-            return new MemoryCacheEntryOptions()
-                       .SetSlidingExpiration(TimeSpan.FromMinutes(productionCacheExpirationInSeconds));
-        }
-
-        private MemoryCacheEntryOptions GetSandboxCacheOptions()
-        {
-            var sandboxCacheExpirationInSeconds = 86399;
-
-             return new MemoryCacheEntryOptions()
-                        .SetSlidingExpiration(TimeSpan.FromSeconds(sandboxCacheExpirationInSeconds));
-        }
+        private MemoryCacheEntryOptions GetCacheOptions(AccessToken accessToken)
+            => new MemoryCacheEntryOptions()
+                        .SetSlidingExpiration(TimeSpan.FromSeconds(accessToken.ExpiresIn));
     }
 }

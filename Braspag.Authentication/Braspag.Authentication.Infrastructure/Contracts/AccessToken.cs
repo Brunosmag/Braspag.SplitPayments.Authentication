@@ -11,6 +11,6 @@ namespace Braspag.Authentication.Infrastructure.Contracts
         public string Type { get; set; }
 
         [JsonProperty("expires_in")]
-        public string ExpiresIn { get; set; }
+        public double ExpiresIn { get; set; }
     }
 }
