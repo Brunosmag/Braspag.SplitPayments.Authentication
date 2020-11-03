@@ -1,5 +1,4 @@
 ﻿using Braspag.Authentication.Infrastructure.Contracts;
-using System;
 using System.Threading.Tasks;
 
 namespace Braspag.Authentication.Infrastructure.Clients

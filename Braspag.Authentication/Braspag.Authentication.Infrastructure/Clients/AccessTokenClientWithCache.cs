@@ -47,7 +47,13 @@ namespace Braspag.Authentication.Infrastructure.Clients
         }
 
         private MemoryCacheEntryOptions GetCacheOptions(AccessToken accessToken)
-            => new MemoryCacheEntryOptions()
-                        .SetSlidingExpiration(TimeSpan.FromSeconds(accessToken.ExpiresIn));
+        {
+            var defaultTolerance = 20;
+            var cacheDurationInSeconds = accessToken.ExpiresIn - defaultTolerance;
+
+            return new MemoryCacheEntryOptions()
+                        .SetSlidingExpiration(TimeSpan.FromSeconds(cacheDurationInSeconds));
+        }
+
     }
 }
