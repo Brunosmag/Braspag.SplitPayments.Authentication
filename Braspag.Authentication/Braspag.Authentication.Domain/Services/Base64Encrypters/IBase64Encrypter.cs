@@ -2,8 +2,8 @@
 
 namespace Braspag.Authentication.Domain.Services.Base64Encrypters
 {
-    public interface IBase64Encrypter
+    public interface IBase64Encoder
     {
-        string EncryptInBase64(Guid clientId, string clientSecret);
+        string EncodeInBase64(Guid clientId, string clientSecret);
     }
 }

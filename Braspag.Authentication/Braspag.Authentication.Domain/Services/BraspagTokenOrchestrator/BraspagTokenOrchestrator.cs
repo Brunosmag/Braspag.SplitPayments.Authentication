@@ -8,11 +8,11 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
 {
     public class BraspagTokenOrchestrator : IBraspagTokenOrchestrator
     {
-        public IBase64Encrypter Base64Encrypter { get; }
+        public IBase64Encoder Base64Encrypter { get; }
         public IAccessTokenClient AccessTokenClient { get; }
 
         public BraspagTokenOrchestrator(
-            IBase64Encrypter base64Encrypter,
+            IBase64Encoder base64Encrypter,
             IAccessTokenClient accessTokenClient)
         {
             Base64Encrypter = base64Encrypter ?? throw new ArgumentNullException(nameof(base64Encrypter));
@@ -35,6 +35,6 @@ namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
         }
 
         private string EncryptCredentialsInBase64(Guid clientId, string clientSecret)
-            => Base64Encrypter.EncryptInBase64(clientId, clientSecret);
+            => Base64Encrypter.EncodeInBase64(clientId, clientSecret);
     }
 }

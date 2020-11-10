@@ -11,7 +11,7 @@ namespace Braspag.Authentication.Commons.DependencyInjection
     {
         public static IServiceCollection AddBraspagAuthentication(this IServiceCollection services)
         {
-            services.AddTransient<IBase64Encrypter, Base64Encrypter>();
+            services.AddTransient<IBase64Encoder, Base64Encoder>();
 
             services.AddTransient<IBraspagTokenOrchestrator, BraspagTokenOrchestrator>();
 
