@@ -5,9 +5,9 @@ using System.Text;
 using Braspag.Authentication.Domain.Services.Base64Encrypters;
 using FluentAssertions;
 
-namespace Braspag.Authentication.UnitTests.Domain.Services.Base64Encrypters
+namespace Braspag.Authentication.UnitTests.Domain.Services
 {
-    public class Base64EncrypterTests
+    public class Base64EncoderTests
     {
         [Theory,AutoNSubstituteData]
         public void Sut_Should_Implement_IBase64Encrypter(
