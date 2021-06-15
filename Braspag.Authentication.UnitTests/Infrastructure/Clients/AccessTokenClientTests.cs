@@ -91,7 +91,7 @@ namespace Braspag.Authentication.UnitTests.Infrastructure.Clients
             var expectedToken = _fixture.Create<AccessToken>();
             _httpResponseMessageHandler.HandleResponse<AccessToken>(default).ReturnsForAnyArgs(expectedToken);
 
-            var result = await _sut.GetSandboxTokenAsync(credentialsInBase64);
+            var result = await _sut.GetProductionTokenAsync(credentialsInBase64);
 
             result.Should().BeEquivalentTo(expectedToken);
 
