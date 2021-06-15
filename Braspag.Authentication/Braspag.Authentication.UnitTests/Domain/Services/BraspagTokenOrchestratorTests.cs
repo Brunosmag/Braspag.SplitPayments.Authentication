@@ -5,7 +5,6 @@ using System;
 using System.Threading.Tasks;
 using Xunit;
 using NSubstitute;
-using NSubstitute;
 using Braspag.Authentication.Infrastructure.Contracts;
 using FluentAssertions;
 

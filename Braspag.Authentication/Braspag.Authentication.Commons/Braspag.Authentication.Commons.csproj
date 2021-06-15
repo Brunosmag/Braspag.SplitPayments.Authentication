@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Braspag.Authentication.Domain\Braspag.Authentication.Domain.csproj" />
+    <ProjectReference Include="..\Braspag.Authentication.Application\Braspag.Authentication.Application.csproj" />
   </ItemGroup>
 
 </Project>
