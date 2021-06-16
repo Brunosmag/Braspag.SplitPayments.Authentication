@@ -1,5 +1,5 @@
-﻿using Braspag.Authentication.Domain.Services.Base64Encrypters;
-using Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator;
+﻿using Braspag.Authentication.Application.Services.Base64Encrypters;
+using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
 using Braspag.Authentication.Infrastructure.Clients;
 using Braspag.Authentication.Infrastructure.Handlers;
 using Microsoft.Extensions.Caching.Memory;

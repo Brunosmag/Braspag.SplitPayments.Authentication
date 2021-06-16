@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Braspag.Authentication.Domain.Services.Base64Encrypters
+namespace Braspag.Authentication.Application.Services.Base64Encrypters
 {
     public interface IBase64Encoder
     {

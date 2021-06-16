@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
+namespace Braspag.Authentication.Application.Services.BraspagTokenOrchestrator
 {
     public interface IBraspagTokenOrchestrator
     {

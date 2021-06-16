@@ -1,10 +1,10 @@
-﻿using Braspag.Authentication.Domain.Services.Base64Encrypters;
+﻿using Braspag.Authentication.Application.Services.Base64Encrypters;
 using Braspag.Authentication.Infrastructure.Clients;
 using Braspag.Authentication.Infrastructure.Contracts;
 using System;
 using System.Threading.Tasks;
 
-namespace Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator
+namespace Braspag.Authentication.Application.Services.BraspagTokenOrchestrator
 {
     public class BraspagTokenOrchestrator : IBraspagTokenOrchestrator
     {

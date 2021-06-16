@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 using System.Text;
-using Braspag.Authentication.Domain.Services.Base64Encrypters;
+using Braspag.Authentication.Application.Services.Base64Encrypters;
 using FluentAssertions;
 
 namespace Braspag.Authentication.UnitTests.Domain.Services

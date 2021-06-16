@@ -1,5 +1,5 @@
 ﻿using AutoFixture.Idioms;
-using Braspag.Authentication.Domain.Services.BraspagTokenOrchestrator;
+using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
 using Braspag.Authentication.UnitTests.AutoFixture;
 using System;
 using System.Threading.Tasks;
