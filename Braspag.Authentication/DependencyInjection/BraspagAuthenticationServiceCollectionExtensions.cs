@@ -6,7 +6,7 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
 
-namespace Braspag.Authentication.Commons.DependencyInjection
+namespace Braspag.Authentication.DependencyInjection
 {
     public static class BraspagAuthenticationServiceCollectionExtensions
     {

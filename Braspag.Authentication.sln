@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Infrastructure", "Braspag.Authentication.Infrastructure\Braspag.Authentication.Infrastructure.csproj", "{B8657883-8686-4849-9020-EE5B718D8793}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Commons", "Braspag.Authentication.Commons\Braspag.Authentication.Commons.csproj", "{D95BAEB8-42C9-404C-B40E-D5D98631127E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication", "Braspag.Authentication\Braspag.Authentication.csproj", "{D95BAEB8-42C9-404C-B40E-D5D98631127E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Application", "Braspag.Authentication.Application\Braspag.Authentication.Application.csproj", "{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}"
 EndProject
