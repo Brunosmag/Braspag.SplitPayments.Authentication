@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Braspag.SplitPayments.Authentication</id>
+    <version>1.0.0</version>
+    <authors>Bruno Magalhaes</authors>
+    <owners>brunosmag</owners>
+    <projectUrl>https://github.com/Brunosmag/braspag-authentication</projectUrl>
+    <releaseNotes>Iniciando empacotamento da biblioteca.</releaseNotes>
+    <description>Biblioteca desenvolvida para obter o token de autenticação para os serviços de Split de Pagamentos (Marketplace) da Braspag.</description>
+    <tags>braspag</tags>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="13.0.1" />
+    </dependencies>
+  </metadata>
+</package>
