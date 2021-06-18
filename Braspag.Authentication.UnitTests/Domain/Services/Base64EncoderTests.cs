@@ -13,7 +13,7 @@ namespace Braspag.Authentication.UnitTests.Domain.Services
         public void Sut_Should_Implement_IBase64Encrypter(
             Base64Encoder sut)
         {
-            Assert.IsAssignableFrom<IBase64Encoder>(sut);
+            Assert.IsAssignableFrom<IBase64Encrypter>(sut);
         }
 
         [Theory,AutoNSubstituteData]

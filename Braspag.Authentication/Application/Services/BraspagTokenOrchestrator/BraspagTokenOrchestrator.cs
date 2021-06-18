@@ -8,11 +8,11 @@ namespace Braspag.Authentication.Application.Services.BraspagTokenOrchestrator
 {
     public class BraspagTokenOrchestrator : IBraspagTokenOrchestrator
     {
-        public IBase64Encoder Base64Encoder { get; }
+        public IBase64Encrypter Base64Encoder { get; }
         public IAccessTokenClient AccessTokenClient { get; }
 
         public BraspagTokenOrchestrator(
-            IBase64Encoder base64Encoder,
+            IBase64Encrypter base64Encoder,
             IAccessTokenClient accessTokenClient)
         {
             Base64Encoder = base64Encoder ?? throw new ArgumentNullException(nameof(base64Encoder));

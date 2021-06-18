@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Braspag.Authentication.Application.Services.Base64Encrypters
 {
-    public class Base64Encoder : IBase64Encoder
+    public class Base64Encoder : IBase64Encrypter
     {
         public string EncodeInBase64(Guid clientId, string clientSecret)
         {

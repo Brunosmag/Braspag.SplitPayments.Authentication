@@ -1,5 +1,4 @@
 ﻿using AutoFixture.Idioms;
-using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
 using Braspag.Authentication.UnitTests.AutoFixture;
 using System;
 using System.Threading.Tasks;
@@ -7,6 +6,7 @@ using Xunit;
 using NSubstitute;
 using Braspag.Authentication.Infrastructure.Contracts;
 using FluentAssertions;
+using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
 
 namespace Braspag.Authentication.UnitTests.Domain.Services
 {

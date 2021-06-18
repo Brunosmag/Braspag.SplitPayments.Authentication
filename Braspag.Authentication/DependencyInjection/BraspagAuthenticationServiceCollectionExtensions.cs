@@ -1,10 +1,10 @@
-﻿using Braspag.Authentication.Application.Services.Base64Encrypters;
-using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
-using Braspag.Authentication.Infrastructure.Clients;
+﻿using Braspag.Authentication.Infrastructure.Clients;
 using Braspag.Authentication.Infrastructure.Handlers;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using System.Net.Http;
+using Braspag.Authentication.Application.Services.Base64Encrypters;
+using Braspag.Authentication.Application.Services.BraspagTokenOrchestrator;
 
 namespace Braspag.Authentication.DependencyInjection
 {
@@ -12,7 +12,7 @@ namespace Braspag.Authentication.DependencyInjection
     {
         public static IServiceCollection AddBraspagAuthentication(this IServiceCollection services)
         {
-            services.AddTransient<IBase64Encoder, Base64Encoder>();
+            services.AddTransient<IBase64Encrypter, Base64Encoder>();
 
             services.AddTransient<IBraspagTokenOrchestrator, BraspagTokenOrchestrator>();
 
