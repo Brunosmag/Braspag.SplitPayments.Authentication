@@ -5,11 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.UnitTests", "Braspag.Authentication.UnitTests\Braspag.Authentication.UnitTests.csproj", "{FC55B291-054D-4098-9296-05C117644950}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Infrastructure", "Braspag.Authentication.Infrastructure\Braspag.Authentication.Infrastructure.csproj", "{B8657883-8686-4849-9020-EE5B718D8793}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication", "Braspag.Authentication\Braspag.Authentication.csproj", "{D95BAEB8-42C9-404C-B40E-D5D98631127E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Braspag.Authentication.Application", "Braspag.Authentication.Application\Braspag.Authentication.Application.csproj", "{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +17,10 @@ Global
 		{FC55B291-054D-4098-9296-05C117644950}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC55B291-054D-4098-9296-05C117644950}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC55B291-054D-4098-9296-05C117644950}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8657883-8686-4849-9020-EE5B718D8793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8657883-8686-4849-9020-EE5B718D8793}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8657883-8686-4849-9020-EE5B718D8793}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8657883-8686-4849-9020-EE5B718D8793}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D95BAEB8-42C9-404C-B40E-D5D98631127E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D95BAEB8-42C9-404C-B40E-D5D98631127E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95BAEB8-42C9-404C-B40E-D5D98631127E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D95BAEB8-42C9-404C-B40E-D5D98631127E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35F8AE2E-11B0-46ED-AA27-1101E60D01A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

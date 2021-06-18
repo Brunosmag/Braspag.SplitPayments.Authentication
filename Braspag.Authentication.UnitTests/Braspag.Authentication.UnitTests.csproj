@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Braspag.Authentication.Application\Braspag.Authentication.Application.csproj" />
+    <ProjectReference Include="..\Braspag.Authentication\Braspag.Authentication.csproj" />
   </ItemGroup>
 
 </Project>
