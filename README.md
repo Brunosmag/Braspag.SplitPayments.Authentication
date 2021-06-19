@@ -11,7 +11,7 @@ Demais informações sobre autenticação, modelos de negócio, fluxos transacio
 ## 💻 Pré-requisitos
 
 * Seu projeto utiliza uma versão do .NET compatível com .NET Standard 2.1.
-* Você possui um ClientId/ClientSecret gerado pela Braspag.
+* Você possui um ClientId/ClientSecret apto a utilizar os serviços de Split de Pagamentos (Marketplace) da Braspag.
 
 ## 🚀 Instalando <Braspag.SplitPayments.Authentication>
 
@@ -39,4 +39,3 @@ Para contribuir com <Braspag.SplitPayments.Authentication>, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-[⬆ Voltar ao topo](#Braspag.SplitPayments.Authentication)<br>
