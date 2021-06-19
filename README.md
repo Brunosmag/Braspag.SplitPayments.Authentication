@@ -39,4 +39,4 @@ Para contribuir com <Braspag.SplitPayments.Authentication>, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-[⬆ Voltar ao topo](#braspag-authentication)<br>
+[⬆ Voltar ao topo](#Braspag.SplitPayments.Authentication)<br>
