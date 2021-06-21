@@ -5,9 +5,6 @@ on:
       - master # Default release branch
 jobs:
   pack-push:
-    env:
-      PROJECT_PATH: ./Braspag.Authentication.nuspec
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +15,7 @@ jobs:
         dotnet-version: 5.0.101
 
     - name: Geração do package
-      run: nuget pack ${{ env.PROJECT_PATH }} -IncludeReferencedProjects
+      run: nuget pack Braspag.Authentication.nuspec -IncludeReferencedProjects
 
     - name: Push no NuGet
       run: |
