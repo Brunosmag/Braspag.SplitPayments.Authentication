@@ -6,7 +6,7 @@ on:
 jobs:
   pack-push:
     env:
-      PATH: ./Braspag.Authentication/Braspag.Authentication.csproj
+      PROJECT_PATH: ./Braspag.Authentication/Braspag.Authentication.csproj
 
     runs-on: ubuntu-latest
 
@@ -18,7 +18,7 @@ jobs:
         dotnet-version: 5.0.101
 
     - name: Geração do package
-      run: dotnet pack ${{ env.PATH }} -c Release -o out
+      run: dotnet pack ${{ env.PROJECT_PATH }} -c Release -o out
 
     - name: Push no NuGet
       run: |
