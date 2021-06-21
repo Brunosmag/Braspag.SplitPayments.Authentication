@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Brunosmag/braspag-authentication?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Brunosmag/braspag-authentication?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Brunosmag/braspag-authentication?style=for-the-badge)
 
 > A principal finalidade dessa biblioteca é  ilustrar para os desenvolvedores que utilizam/pretendem utilizar o serviço de Subadquirência/Split de Pagamentos da Braspag como o processo de autenticação deve ser efetuado.
 Demais informações sobre autenticação, modelos de negócio, fluxos transacionais podem ser encontradas em https://braspag.github.io//manual/split-de-pagamentos-cielo-e-commerce. 
