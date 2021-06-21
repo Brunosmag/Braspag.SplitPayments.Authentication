@@ -15,7 +15,7 @@ jobs:
         id: publish_nuget
         uses: rohith/publish-nuget@v2
         with:
-          PROJECT_FILE_PATH: Braspag.Authentication/Braspag.Authentication.csproj          
+          PROJECT_FILE_PATH: Braspag.Authentication\Braspag.Authentication.csproj          
           PACKAGE_NAME: Braspag.SplitPayments.Authentication          
           TAG_COMMIT: true
           TAG_FORMAT: v*
