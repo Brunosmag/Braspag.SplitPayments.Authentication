@@ -6,7 +6,7 @@ on:
 jobs:
   pack-push:
     env:
-      PROJECT_PATH: ./Braspag.Authentication/Braspag.Authentication.nuspec
+      PROJECT_PATH: ./Braspag.Authentication.nuspec
 
     runs-on: ubuntu-latest
 
