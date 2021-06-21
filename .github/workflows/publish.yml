@@ -4,21 +4,23 @@ on:
     branches:
       - master # Default release branch
 jobs:
-  publish:
-    name: build, pack & publish
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  pack-push:
+    env:
+      PATH: ./Braspag.Authentication/Braspag.Authentication.csproj
 
-      # Publish
-      - name: publish on version change
-        id: publish_nuget
-        uses: rohith/publish-nuget@v2
-        with:
-          PROJECT_FILE_PATH: Braspag.Authentication\Braspag.Authentication.csproj          
-          PACKAGE_NAME: Braspag.SplitPayments.Authentication          
-          TAG_COMMIT: true
-          TAG_FORMAT: v*
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-          NUGET_SOURCE: https://api.nuget.org
-          INCLUDE_SYMBOLS: false
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET 5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.101
+
+    - name: Geração do package
+      run: dotnet pack ${{ env.PATH }} -c Release -o out
+
+    - name: Push no NuGet
+      run: |
+        cd out
+        dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_SERVER }} --skip-duplicate
