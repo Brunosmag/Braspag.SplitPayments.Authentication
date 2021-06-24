@@ -1,6 +1,7 @@
 # Braspag.SplitPayments.Authentication
 
-![Build](https://github.com/Brunosmag/Braspag.SplitPayments.Authentication/actions/workflows/build-and-test.yml/badge.svg)
+ (https://github.com/Brunosmag/Braspag.SplitPayments.Authentication/actions/workflows/build-and-test.yml/badge.svg)
+
 ![GitHub repo size](https://img.shields.io/github/repo-size/Brunosmag/braspag-authentication?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/Brunosmag/braspag-authentication?style=for-the-badge)
 
