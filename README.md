@@ -38,3 +38,5 @@ Para contribuir com <Braspag.SplitPayments.Authentication>, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+Vale ressaltar que essa biblioteca é totalmente open-source, não possui nenhum vínculo direto com a empresa Braspag e está em constante desenvolvimento e aprimoramento.
+
