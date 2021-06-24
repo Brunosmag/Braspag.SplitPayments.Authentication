@@ -27,6 +27,14 @@ As informações de ClientId/ClientSecret são sigilosas e é altamente recomend
 
 A biblioteca conta que cache em memoria, que irá proporcionar mais agilidade no processo de geração do token, evitando chamadas desnecessárias para o serviço de autenticação (conhecido como BraspagAuth). Dessa forma, o consumidor não precisa se preocupar com a validação do "expires_in" que é retornado pelo serviço de autenticação.
 
+Tenha certeza que você registrou os seguintes serviços no seu container de injeção de dependência:
+
+```
+services.AddBraspagAuthentication();
+services.AddMemoryCache();
+services.AddHttpClient();
+```
+
 ## 📫 Contribuindo para <Braspag.SplitPayments.Authentication>
 Para contribuir com <Braspag.SplitPayments.Authentication>, siga estas etapas:
 
