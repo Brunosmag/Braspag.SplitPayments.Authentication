@@ -18,7 +18,7 @@ Demais informações sobre autenticação, modelos de negócio, fluxos transacio
 
 Nuget:
 ```
-Install-Package Braspag.SplitPayments.Authentication -Version 1.0.0
+Install-Package Braspag.SplitPayments.Authentication -Version 1.0.3
 ```
 
 ## ☕ Usando <Braspag.SplitPayments.Authentication>
@@ -36,6 +36,8 @@ services.AddBraspagAuthentication();
 services.AddMemoryCache();
 services.AddHttpClient();
 ```
+
+Ainda ficou com dúvidas? Você pode utilizar o exemplo existente no repositório https://github.com/Brunosmag/Braspag.SplitPayments.Authentication.Example.
 
 ## 📫 Contribuindo para <Braspag.SplitPayments.Authentication>
 Para contribuir com <Braspag.SplitPayments.Authentication>, siga estas etapas:
