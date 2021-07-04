@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <PackageId>Brapag.SplitPayments.Authentication</PackageId>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
+    <RepositoryUrl>https://github.com/Brunosmag/Braspag.SplitPayments.Authentication</RepositoryUrl>
     <Authors>Bruno Magalhaes</Authors>
     <Company>brunosmag</Company>
     <Description>Biblioteca desenvolvida para obter o token de autenticação para os serviços de Split de Pagamentos (Marketplace) da Braspag.</Description>
